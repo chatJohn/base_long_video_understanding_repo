@@ -1,0 +1,38 @@
+# Default SVF-Panel hyperparameters. All supported benchmarks currently share
+# one conservative training-free preset; keep benchmark-specific sections so
+# future ablations can change them independently.
+
+common: &common
+  max_frames: 16
+  smooth_window: 3
+  speed_weight: 0.45
+  curvature_weight: 0.30
+  relevance_gradient_weight: 0.25
+  query_gate_floor: 0.20
+  peak_height_factor: 0.50
+  peak_prominence_factor: 0.08
+  min_distance_ratio: 0.02
+  min_distance_absolute: 3
+  segment_duration_weight: 0.15
+  segment_mean_relevance_weight: 0.35
+  segment_max_relevance_weight: 0.25
+  segment_motion_weight: 0.25
+  frame_relevance_weight: 0.55
+  frame_boundary_weight: 0.25
+  frame_speed_weight: 0.10
+  frame_curvature_weight: 0.10
+  mmr_lambda: 0.65
+  gutter_low_factor: 0.35
+  gutter_high_factor: 1.75
+  page_gutter_factor: 1.50
+  refinement_steps: 4
+  emphasis_fraction: 0.20
+
+videomme:
+  <<: *common
+
+lvb:
+  <<: *common
+
+mlvu:
+  <<: *common

@@ -1,4 +1,9 @@
 pywavelets
+numpy
+scipy
+scikit-learn
+tqdm
+Pillow
 decord==0.6.0
 torch==2.6.0
 torchvision==0.21.0

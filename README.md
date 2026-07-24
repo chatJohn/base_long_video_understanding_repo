@@ -15,6 +15,14 @@ This repo is maintained for our own keyframe selection and LVLM-input constructi
 - integrating constructed keyframe inputs into LVLM evaluation workflows;
 - keeping experiment code, configs, and benchmark adapters in one place.
 
+## Available Methods
+
+- `wfs/`: the wavelet-based baseline implementation.
+- `svf/`: the training-free Semantic Velocity Field + Panel method. It uses
+  semantic speed, direction curvature, query gating, and fixed-budget gutter
+  refinement. See [`svf/README.md`](svf/README.md) for the formulation, output
+  schema, and CLI example.
+
 
 ## Reference
 
